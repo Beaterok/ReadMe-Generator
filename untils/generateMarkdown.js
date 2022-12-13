@@ -3,14 +3,14 @@
 function renderLicenseBadge(license) {
      switch(license) {
     case "MIT":
-        license = license + ": \n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]"
+        license = license + "\n-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]"
       break;
     case "Perl":
-        license = license + ": \n[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)]";
+        license = license + "\n-[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)]";
 
       break;
       case "SIL":
-        license = license + ": \n[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)])"
+        license = license + "\n-[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)])"
       break;
     default:
         license = "none.";
@@ -23,14 +23,14 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
     switch(license) {
         case "MIT":
-            license = license + " (https://opensource.org/licenses/MIT)"
+            license =" (https://opensource.org/licenses/MIT)"
           break;
         case "Perl":
-            license = license + " (https://opensource.org/licenses/Artistic-2.0)";
+            license =" (https://opensource.org/licenses/Artistic-2.0)";
     
           break;
           case "SIL":
-            license = license + " (https://opensource.org/licenses/OFL-1.1)"
+            license =" (https://opensource.org/licenses/OFL-1.1)"
           break;
         default:
             license = "";
@@ -44,15 +44,15 @@ function renderLicenseSection(license) {
     if(license == "none"){
         return ""
     }else{
-        return `## License\n\n
-        -${data.license}` + renderLicenseBadge(license) + renderLicenseLink(license)+"\n";
+        return `## License\n
+        ${license}` + renderLicenseBadge(license) + renderLicenseLink(license)+"\n";
     }
 
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}# <Your-Project-Title>
+  return `# ${data.title}
 
 ## Description
 
