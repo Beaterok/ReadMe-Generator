@@ -3,14 +3,14 @@
 function renderLicenseBadge(license) {
      switch(license) {
     case "MIT":
-        license = license + "\n-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]"
+        license ="\n-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)"
       break;
     case "Perl":
-        license = license + "\n-[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)]";
+        license ="\n-![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)";
 
       break;
       case "SIL":
-        license = license + "\n-[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)])"
+        license ="\n-![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)"
       break;
     default:
         license = "none.";
@@ -89,7 +89,7 @@ ${renderLicenseSection(data.license)}
 
 ## Tests
 
--${test}
+-${data.test}
 
 `;
 }

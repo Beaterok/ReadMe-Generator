@@ -60,12 +60,17 @@ const promptUser = () => {
         name: 'license',
         choices: ['MIT', 'Perl', 'SIL','none']
       },
+      {
+        type: 'input',
+        message: 'Tests:',
+        name: 'test',
+      },
     ])
 }
 const init = () => {
   promptUser()
     .then((response) => {
-      fs.writeFile(`README.md`, generateMarkdown(response), (err) =>
+      fs.writeFile(`${response.title}.md`, generateMarkdown(response), (err) =>
         err ? console.error(err) : console.log('Success!'))
     }
     );
