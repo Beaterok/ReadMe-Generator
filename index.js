@@ -58,7 +58,7 @@ const promptUser = () => {
         type: 'list',
         message: 'License:',
         name: 'license',
-        choices: ['MIT', 'Perl', 'SIL','none']
+        choices: ['MIT', 'Perl', 'SIL', 'none']
       },
       {
         type: 'input',

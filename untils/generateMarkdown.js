@@ -26,8 +26,7 @@ function renderLicenseLink(license) {
             license =" (https://opensource.org/licenses/MIT)"
           break;
         case "Perl":
-            license =" (https://opensource.org/licenses/Artistic-2.0)";
-    
+            license =" (https://opensource.org/licenses/Artistic-2.0)"
           break;
           case "SIL":
             license =" (https://opensource.org/licenses/OFL-1.1)"
